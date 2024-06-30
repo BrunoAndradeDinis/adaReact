@@ -16,6 +16,16 @@
 - JavaScript avançado I: programação assincrona
 
 ## TypeScript, POO e Broweser APIs
+- JSON
+- API: introdução
+- Consumo de API
+- Typescript I
+- Typescript II
+- Programção Orientada a Objetos
+- Browser API I
+- Browser API II
+- Projeto JS: Lista de tarefas
+- Projeto JS: Condições do Tempo
 
 ## React I: Introdução e componentes em Classe
 

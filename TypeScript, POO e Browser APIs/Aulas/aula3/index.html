@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API = ViaCEP</title>
+  <style>
+    * {
+      background-color: #333;
+      color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>ViaCEP - Integração com a Fetch API</h1>
+  <a href="./fakeStore.html">Fake Store API</a>
+  <div>
+    <pre id="dados"></pre>
+  </div>
+  <input type="number" value="01001000" id="cep" maxlength="8" required>
+  <button onclick="obterDadosDoCep()">Buscar</button>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
