@@ -214,7 +214,85 @@ Isso significa que nenhuma informação do cliente é armazenada entre solicita�
 - [FakeStore API](https://fakestoreapi.com/)
 
 ## Typescript I
+Claro! Aqui está o conteúdo em formato Markdown:
 
+---
+
+### TypeScript: O que é, como funciona e como usar
+
+#### O que é TypeScript?
+*JavaScript com sintaxe para tipos*, o TypeScript é uma linguagem de programação desenvolvida pela Microsoft que adiciona recursos de tipagem estática opcional ao JavaScript. Isso significa que você pode definir tipos para suas variáveis, parâmetros de função e retornos de função, o que ajuda a capturar erros de tipo durante o desenvolvimento.
+
+#### Como funciona o TypeScript?
+
+O TypeScript funciona como um superconjunto de JavaScript, o que significa que qualquer código JavaScript válido também é válido em TypeScript. O código TypeScript é compilado para JavaScript simples antes de ser executado. Durante a compilação, o TypeScript verifica tipos e realiza outras transformações de código conforme necessário.
+
+### Como usar TypeScript?
+
+#### Instalação
+
+Para começar a usar TypeScript, você precisa instalar o TypeScript Compiler (`tsc`) globalmente via npm (Node Package Manager). Você pode fazer isso executando o seguinte comando no seu terminal:
+
+```bash
+npm install -g typescript
+```
+
+#### Criando um arquivo TypeScript
+
+1. **Criar um arquivo TypeScript**: Crie um arquivo com a extensão `.ts` (por exemplo, `hello.ts`).
+
+2. **Escrever código TypeScript**:
+   
+   ```typescript
+   function greet(name: string) {
+       console.log(`Hello, ${name}!`);
+   }
+
+   let user = "Alice";
+   greet(user);
+   ```
+
+   Neste exemplo, `name: string` indica que `name` deve ser uma string. TypeScript verifica isso durante a compilação.
+
+3. **Compilar o código TypeScript**: No terminal, execute o seguinte comando para compilar seu arquivo TypeScript:
+
+   ```bash
+   tsc hello.ts
+   ```
+
+   Isso irá gerar um arquivo JavaScript correspondente (`hello.js`).
+
+4. **Executar o arquivo JavaScript**: Você pode então executar o arquivo JavaScript gerado normalmente:
+
+   ```bash
+   node hello.js
+   ```
+
+#### Recursos do TypeScript
+
+- **Tipagem estática opcional**: Permite definir tipos para variáveis, parâmetros de função e retornos de função para capturar erros de tipo em tempo de compilação.
+  
+- **Compatibilidade**: Como TypeScript é um superconjunto de JavaScript, você pode utilizar qualquer biblioteca JavaScript existente diretamente no seu código TypeScript.
+
+- **Ferramentas de desenvolvimento**: TypeScript é integrado com diversas ferramentas de desenvolvimento como VS Code, proporcionando suporte avançado para autocompletar, refatoração e detecção de erros.
+
+TypeScript é uma excelente escolha para desenvolvedores que desejam aumentar a segurança e a manutenibilidade de seus projetos JavaScript. Com sua tipagem estática opcional e a capacidade de compilar para versões mais antigas de JavaScript, TypeScript oferece uma forma poderosa de escrever código mais robusto e escalável.
+
+Para mais informações e detalhes, consulte a [documentação oficial do TypeScript](https://www.typescriptlang.org/).
+
+---
+**Vantagens**
+- Types
+- Utilização de um JS mais recente (compilado para funcionar em browsers mais antigos)
+- Adiciona novos recursos, que não existem no JS (ex: Interfaces e Generics)
+- Muitas opções de configurações
+- Melhores sugestôes de código em IDEs que têm um suporte melhorado ao TS
+```
+Utilizado em projetos ReactJS e ja vem instalado no Angular
+```
+
+![Imagem]](image-1.png)
+- O TS só vai servir para o momento que estivermos realizando o desenvolvimento, depois a gente não vai utiliza-lo no servidor para o rodar com o app, ele só vai transpilar/compilar tudo para JS.
 
 ## Typescript II
 
@@ -232,4 +310,3 @@ Isso significa que nenhuma informação do cliente é armazenada entre solicita�
 
 
 ## Projeto JS: Condições do Tempo
-
