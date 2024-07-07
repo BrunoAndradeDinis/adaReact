@@ -1,0 +1,15 @@
+{
+  "name": "aula6",
+  "version": "1.0.0",
+  "description": "1. Inicializar um projeto Node.js.\r     - `npm init -y` | vai criar e aceitar tudo\r 2. Instalar o TypeScript.\r   2.1. Instalação global: `npm install -g typescript`\r   2.2. Instalação local (dentro do projeto) `npm install typescript -D` esse -D é de dev, para utilização somente no desenvolvimento e não na produção.\r 3. Rodando o TypeScript instalado para transpilar o nosso código (converter o nosso código TS para JS)\r   3.1. `npx tsc .\\nome-du-arquivo.ts` ou `npx tsc .\\nome-du-arquivo.ts --watch` \r   3.2. `npx tsc --init` ele vai inicializar todas as configurações do TS geranto o arquivo `tsconfig.json` e automaticamente ao rodar o `npx tsc` ele compila todos os arquivos .ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,13 @@
+* {
+  transition: .3s;
+}
+body{
+  background-color: antiquewhite;
+}
+.btn{
+  background-color: lightcoral;
+  color: antiquewhite;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 5px;
+}
