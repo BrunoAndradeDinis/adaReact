@@ -28,8 +28,18 @@
 - Projeto JS: Condições do Tempo
 
 ## React I: Introdução e componentes em Classe
+- Introdução ao ReactJS
+- React Legado I - Componentização
+- React Legado II - Props e Estados
+- React Legado III - Ciclo de vida
 
 ## React II: Componentes Funcionais e Hooks
+- React Funcional I - Componentes Funcionais e Estilização
+- React Funcional II - Hook de estado
+- React Funcional III - Hook de efeito
+- React Funcional IV - Hooks de memoização
+- React Funcional V - Hooks de contexto
+
 
 ## Styled Componentes
 
