@@ -18,8 +18,6 @@ export const Tasks: React.FC = () => {
   // função disparada quando o usuário quer uma tarefa nova
   function handleSubmitAddTask(event: FormEvent) {
     event.preventDefault();
-
-    console.log(taskTitle);
     if (taskTitle.length < 3) {
       alert(
         "Não é possível adicionar uma tarefa com menos de 3 letras. A tarefa tem que ter no minimo 3 caractéres."

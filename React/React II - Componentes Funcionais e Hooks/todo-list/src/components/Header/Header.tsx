@@ -15,8 +15,7 @@ export const Header: React.FC = () => {
   },0)
   const totalDone = totalTasks - totalPending
 
-  console.log("Header", tasks);
-  const [estado, funcaoParaAlterarOEstado] = useState(""); // hook de estado, tem que ser iniciado com algum valor/dado para ele retornar, ele vai retornar um array com 2 elementos, uma tupla, contendo na posição [0] o estado [1] a função para alterar o estado
+//   const [estado, funcaoParaAlterarOEstado] = useState(""); // hook de estado, tem que ser iniciado com algum valor/dado para ele retornar, ele vai retornar um array com 2 elementos, uma tupla, contendo na posição [0] o estado [1] a função para alterar o estado
 
   return (
     <header className={styles.header}>
