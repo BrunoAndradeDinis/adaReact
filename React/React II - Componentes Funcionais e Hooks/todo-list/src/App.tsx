@@ -1,18 +1,15 @@
-import React from 'react';
-import { Header } from './components/Header/Header';
-import {StatsCard} from './components/StatsCard/StatsCard'
-
+import { Header } from "./components/Header/Header";
+import { Tasks } from "./components/Tasks/Tasks";
+import { TasksProvider } from "./context/TasksContext";
 
 import "./styles/global.css";
-import { Tasks } from './components/Tasks/Tasks';
-
 
 function App() {
   return (
-    <>
-     <Header/>
-     <Tasks/> 
-    </>
+    <TasksProvider>
+      <Header />
+      <Tasks />
+    </TasksProvider>
   );
 }
 

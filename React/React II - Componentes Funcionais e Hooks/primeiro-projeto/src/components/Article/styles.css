@@ -5,7 +5,8 @@
 
 #article img {
   border-radius: 1rem;
-  min-width: 200px;
+  min-width: 250px;
+  max-height: 175px ;
 }
 
 #article .article-infos h2 {

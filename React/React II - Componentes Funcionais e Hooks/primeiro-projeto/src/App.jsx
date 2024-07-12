@@ -1,46 +1,67 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "./styles/App.css";
-import {Navbar} from "./components/NavBar/Navbar";
+import { Navbar } from "./components/NavBar/Navbar";
 import { Article } from "./components/Article/Article";
-import article1 from './assets/images/space.jpg'
-import article2 from './assets/images/space.webp'
-import article3 from './assets/images/article1.jpg'
-import { Counter } from "./components/Counter/Counter";
+// import { Counter } from "./components/Counter/Counter";
+import axios from "axios";
+import { Vortex } from "react-loader-spinner";
 
 // Componente em classe é uma classe que herda a classe component do react e retorna HTML dentro do método Render
 
 // Componente funcional é uma função que retorna um HTML
 
-class App extends React.Component {
-  render() {
-    // mètodo responsável por rederizar o conteúdo HTML do nosso componente
-    return (
-      <>
-        <Navbar />
-        <Counter />
-        <section className="articles">
-          <Article thumbnail={article3} title='Designing Dashboards' provider="NASA" description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repellat suscipit rem ad consectetur ex cumque fuga at distinctio eveniet facilis quaerat voluptates, quo vitae porro accusantium veniam nam. Excepturi!"/>
-         
-          <Article thumbnail={article1} title='Vibrants portraits' provider="Space news" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim itaque rem, velit cupiditate, ducimus commodi accusantium omnis delectus, blanditiis eligendi ut. Facere ratione cupiditate porro voluptas veritatis impedit beatae. Reiciendis?"/>
-          
-          <Article thumbnail={article2} title='36 days of Malayalam type ' provider="Spaceflight Now" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam harum ea qui aliquam hic exercitationem delectus cupiditate ducimus nesciunt! Doloremque, necessitatibus omnis beatae fugiat similique esse dolorum ad quos voluptatem."/>
-          
-          <Article thumbnail={article3} title='Designing Dashboards' provider="NASA" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, exercitationem. Quo deserunt dolores, placeat perferendis asperiores quidem aperiam libero, similique magni fugit odit fugiat eaque quisquam incidunt ipsam sequi possimus?"/>
-          
-        </section>
+function App() {
+  const [news, setNews] = useState([]);
 
+  useEffect(() => {
+    async function loadNews() {
+      const response = await axios.get(
+        "https://api.spaceflightnewsapi.net/v4/articles/?format=json"
+      );
+      const newsData = response.data.results;
 
-      </>
-    );
-  }
+      console.log(newsData);
+      setNews(newsData);
+    }
+    loadNews();
+  }, []);
+  // mètodo responsável por rederizar o conteúdo HTML do nosso componente
+  return (
+    <>
+      <Navbar />
+
+      {/* <Counter /> */}
+      <section className="articles">
+        {news.length === 0 ? (
+          <div style={{height: '400px', width:'100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <Vortex
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="vortex-loading"
+              wrapperStyle={{}}
+              wrapperClass="vortex-wrapper"
+              colors={["white", "white", "white", "white", "white", "white"]}
+            />
+          </div>
+        ) : (
+          news.map((article) => {
+            console.log("este é o :", article);
+            return (
+              <Article
+                title={article.title}
+                thumbnail={article.image_url}
+                provider={article.news_site}
+                description={article.summary}
+                key={article.id}
+                link={article.url}
+              />
+            );
+          })
+        )}
+      </section>
+    </>
+  );
 }
-
-// function App() {
-//   return (
-//     <div>
-//       <h1>Bruno de andrade</h1>
-//     </div>
-//   );
-// }
 
 export default App;

@@ -2,7 +2,7 @@ import React from "react";
 // import articleImg from '../../assets/images/article1.jpg'
 import './styles.css'
 
-export function Article({title, provider, description, thumbnail}){
+export function Article({title, provider, description, thumbnail, link}){
   // this.props
 
     return(
@@ -14,6 +14,7 @@ export function Article({title, provider, description, thumbnail}){
           <p>
             {description}
           </p>
+          <p>Link: <a href={link} target="_blank" rel="noopener noreferrer">{title}</a></p>
         </div>
       </article>
     )

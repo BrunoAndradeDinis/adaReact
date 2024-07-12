@@ -1,5 +1,4 @@
 import React from "react";
-import logoImg from '../../assets/images/logo.png';
 import "./styles.css";
 
 export function Navbar() {
@@ -8,7 +7,7 @@ export function Navbar() {
     <header>
       <nav id="navbar">
         <div className="nav-brand">
-          <img src={logoImg} alt="" />
+          <img src="https://images.vexels.com/media/users/3/300375/isolated/preview/09a178348795ed3f76b1a63782ad2de4-desenho-animado-roxo-de-saturno.png?width=320" alt="" />
           <h1>
             Space Flight News </h1>
         </div>
