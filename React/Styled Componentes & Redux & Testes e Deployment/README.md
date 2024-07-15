@@ -53,6 +53,10 @@ Usado em aula será o Jest e o Testing Library
 - [Jest](https://jestjs.io/pt-BR/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Cypress](https://www.cypress.io/)
+
+**Estrutura dos testes**
+![Fluxo de teste](image-6.png)
+
 ## Testes unitários II 
 
 ## Deployment 
