@@ -11,8 +11,16 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     font-style: normal;
+    transition: .3s;
   }
   body{
     background-color: #f7f7f7;
+  }
+  button {
+    cursor: pointer;
+
+    &:hover{
+      filter: brightness(1.5);
+    }
   }
 `

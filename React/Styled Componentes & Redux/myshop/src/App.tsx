@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { Header } from "./components/Header/Header";
-import { ProductCard } from "./components/ProductCard/ProductCard";
+import { ProductsList } from "./components/ProductsList/ProductsList";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 // Componente estilizado
 // const Title = styled.h1`
@@ -18,12 +19,12 @@ import { ProductCard } from "./components/ProductCard/ProductCard";
 // Componente Funcional do React
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Header/>
-      <ProductCard/>
+      <ProductsList/>
 
       <GlobalStyles/>
-    </>
+    </Provider>
   );
 }
 
