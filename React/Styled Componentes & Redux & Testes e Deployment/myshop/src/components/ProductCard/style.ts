@@ -73,3 +73,21 @@ export const AddToCartButton = styled.button`
     font-size: .7rem;
   }
 `;
+export const RemoveFromCartButton = styled.button`
+  border: none;
+  border-radius: .5rem;
+  height: 3rem;
+  background-color: violet;
+  color: #222;
+  font-size: .9rem;
+  cursor: pointer;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: center;
+  svg{
+    font-size: .7rem;
+  }
+`;
