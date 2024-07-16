@@ -57,7 +57,31 @@ Usado em aula será o Jest e o Testing Library
 **Estrutura dos testes**
 ![Fluxo de teste](image-6.png)
 
-## Testes unitários II 
-
 ## Deployment 
+**Introdução**
+- Ao concluir a etapa de desenvolvimento da aplicação, garantindo que ela está pronta para ser utilizada pelo usuário final, podemos partir para a etapa de implantação da aplicação.
+- O deploy se refere à etapa de implementação da aplicação, ou seja, ao processo disponibilizar o nosso projeto na web.
+- O deploy nos permite levar aquilo que foi implementado no ambiente de desenvolvimento para o ambiente de produção
+
+**Etapas do deploy**: Processos envolvidos no Deploy
+
+1. **Preparação do ambiente**:
+Esta etapa envolve garantir que o ambiente de produção esteja configurado corretamente para receber a nova versão do software. Isso pode incluir configuração de servidores, instalação de dependências e ajustes de variáveis de ambiente
+2. **Build**:
+Durante o build, o código fonte é compilado e transformado em uma versão executável ou distribuível. Isso pode envolver a transpilação de código, minificação de arquivos, entre outros processos de otimização
+3. **Testes**:
+Os testes são cruciais para garantir que o software funcione conforme o esperado. Isso inclui testes unitários, testes de integração e, possivelmente, testes de aceitação automatizados. A qualidade do software é verificada nesta fase para evitar problemas em produção.
+4. **Configuração**:
+Nesta etapa, todas as configurações necessárias para o funcionamento do software em produção são ajustadas. Isso pode incluir configurações de banco de dados, conexões de API, configurações de segurança, entre outros.
+5. **Implantação**:
+Durante a implantação, a versão construída e testada do software é colocada em produção. Isso pode ser feito de várias formas, como deploy contínuo, deploy manual ou por meio de ferramentas de automação. O objetivo é tornar o software acessível aos usuários finais
+6. **Monitoramento**: Após a implantação, é essencial monitorar o software em produção para identificar problemas em tempo real, coletar métricas de desempenho e garantir que tudo esteja funcionando conforme o esperado. Isso ajuda a manter a estabilidade e a disponibilidade do sistema.
+
+**Fluxo de desenvolvimento**: visando o ambiente de produção
+
+![Fluxo de desenvolvimento](image-7.png)
+
+**Deploy de uma Aplicação React** 
+![alt text](image-8.png)
+
 

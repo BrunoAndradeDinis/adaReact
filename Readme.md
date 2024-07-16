@@ -42,7 +42,15 @@
 
 
 ## Styled Componentes
+- React + Styled Components I
+- React + Styled Components II
 
 ## Redux
+- Redux I
+- Redux II
+- Redux III
 
 ## Testes e Deployment
+- Testes unitários I
+- Testes unitários II
+- Deployment

@@ -2,8 +2,7 @@ import { FiLogIn, FiShoppingCart, FiLogOut } from "react-icons/fi";
 import * as S from "./styles";
 import { useState } from "react";
 import { Cart } from "../Cart/Cart";
-import { userReducer } from "../../redux/User/reducer";
-import { RootReducer, rootReducer } from "../../redux/root-reducer";
+import { RootReducer } from "../../redux/root-reducer";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout } from "../../redux/User/user-slice";
 
@@ -11,6 +10,9 @@ export const Header: React.FC = () => {
   const { user } = useSelector(
     (rootReducer: RootReducer) => rootReducer.userReducer
   );
+
+  const {cart} = useSelector((rootReducer: RootReducer)=> rootReducer.cartReducer )
+
   const dispatch = useDispatch();
   const [showCart, setShowCart] = useState(false);
 
@@ -58,7 +60,7 @@ export const Header: React.FC = () => {
           </S.CartButton>
         </S.ButtonsWrapper>
       </S.Wrapper>
-      <Cart showCart={showCart} />
+      <Cart showCart={showCart} cart={cart}/>
     </S.StyledHeader>
   );
 };
